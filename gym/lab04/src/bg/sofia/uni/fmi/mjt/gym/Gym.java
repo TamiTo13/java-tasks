@@ -29,7 +29,6 @@ public class Gym implements GymAPI {
 
     @Override
     public SortedSet<GymMember> getMembers() {
-
         final TreeSet<GymMember> ret = new TreeSet<>(members);
         return ret;
     }
@@ -66,7 +65,6 @@ public class Gym implements GymAPI {
 
     @Override
     public void addMembers(Collection<GymMember> members) throws GymCapacityExceededException {
-
         if (members == null || members.isEmpty()) {
             throw new IllegalArgumentException();
         }
@@ -100,7 +98,6 @@ public class Gym implements GymAPI {
 
     @Override
     public Map<DayOfWeek, List<String>> getDailyListOfMembersForExercise(String exerciseName) {
-
         if (exerciseName == null || exerciseName.isEmpty() || exerciseName.isBlank()) {
             throw new IllegalArgumentException();
         }
